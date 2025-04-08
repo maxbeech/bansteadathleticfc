@@ -101,6 +101,34 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({
 };
 
 export default function Home() {
+  // Latest News Section
+  const latestNews = [
+    {
+      title: 'Historic Surrey Football Club Left Without A Home Ground',
+      date: 'January 25, 2025',
+      category: 'Club News',
+      image: '/media/Playing football/2025-03-29_20-56-31_UTC_2.jpg',
+      excerpt: 'Banstead Athletic FC faces an uncertain future as they search for a new home ground.',
+      link: '/news',
+    },
+    {
+      title: 'Join Our Team',
+      date: 'October 06, 2024',
+      category: 'Club News',
+      image: '/media/Playing football/2025-03-08_21-25-43_UTC_1.jpg',
+      excerpt: 'We are looking for passionate individuals to join our team and help grow the club.',
+      link: '/news',
+    },
+    {
+      title: 'Club Statement',
+      date: 'August 30, 2024',
+      category: 'Club News',
+      image: '/media/Playing football/2025-03-22_19-41-45_UTC.jpg',
+      excerpt: 'An important update from the club regarding our future plans and developments.',
+      link: '/news',
+    },
+  ];
+
   return (
     <>
       <Hero />
@@ -142,10 +170,10 @@ export default function Home() {
                 </div>
               </div>
               <Link
-                href="/tickets"
+                href="/fixtures"
                 className="inline-block mt-6 px-6 py-3 bg-white text-amber-600 font-bold rounded-md hover:bg-gray-100 transition-colors"
               >
-                Get Tickets
+                View Fixtures
               </Link>
             </div>
           </div>
@@ -157,26 +185,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white rounded-lg shadow-md overflow-hidden">
+            {latestNews.map((item) => (
+              <div key={item.title} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src="/media/hero.jpg"
-                    alt="News thumbnail"
+                    src={item.image}
+                    alt={item.title}
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-sm text-amber-600 mb-2">February 20, 2024</p>
+                  <p className="text-sm text-amber-600 mb-2">{item.date}</p>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Victory in Weekend Derby Match
+                    {item.title}
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    A fantastic performance from the team sees us secure three points in an exciting match...
+                    {item.excerpt}
                   </p>
                   <Link
-                    href="/news/1"
+                    href={item.link}
                     className="text-amber-600 font-medium hover:text-amber-700"
                   >
                     Read More →
@@ -241,7 +269,7 @@ export default function Home() {
             </div>
             <div className="relative h-96">
               <Image
-                src="/media/hero.jpg"
+                src="/media/Playing football/2025-03-29_20-56-31_UTC_2.jpg"
                 alt="Community involvement"
                 fill
                 className="object-cover rounded-lg shadow-xl"

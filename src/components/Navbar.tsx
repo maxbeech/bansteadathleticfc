@@ -93,10 +93,10 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              href="/tickets"
+              href="/fixtures"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-amber-700 transition-colors duration-300"
             >
-              Buy Tickets
+              Next Match
             </Link>
           </div>
 
@@ -169,11 +169,11 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            href="/tickets"
+            href="/fixtures"
             className="block w-full text-center px-3 py-2 rounded-md text-sm font-medium text-white bg-amber-600 hover:bg-amber-700"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Buy Tickets
+            Next Match
           </Link>
         </div>
       </div>
