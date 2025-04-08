@@ -13,7 +13,7 @@ const fixtures = [
     time: '15:00',
     home: true,
     opponent: 'AFC Uckfield Town',
-    venue: 'Merland Rise',
+    venue: 'Chalky Lane, Chessington',
     competition: 'Southern Combination League',
   },
   {

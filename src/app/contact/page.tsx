@@ -129,13 +129,13 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-gray-700">
-                      Merland Rise
+                      Chalky Lane
                       <br />
-                      Tadworth
+                      Chessington
                       <br />
                       Surrey
                       <br />
-                      KT20 5JG
+                      KT9 2NF
                     </p>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold mb-6">Find Us</h2>
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.827755721374!2d-0.2337!3d51.2917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTErMTcnMzQuMSJOIDDCsDE0JzAxLjMiVw!5e0!3m2!1sen!2suk!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.827755721374!2d-0.3077!3d51.3617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTErMjEnNDIuMSJOIDDCsDE4JzI3LjciVw!5e0!3m2!1sen!2suk!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

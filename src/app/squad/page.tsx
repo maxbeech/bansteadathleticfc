@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Squad & Staff | Banstead Athletic FC',
@@ -12,7 +13,7 @@ const players = [
     name: 'John Smith',
     position: 'Goalkeeper',
     number: '1',
-    image: '/media/player1.jpg',
+    image: '/media/Playing football/2023-07-12_22-46-41_UTC_2.jpg',
     stats: {
       appearances: 25,
       cleanSheets: 8,
@@ -23,7 +24,7 @@ const players = [
     name: 'Mike Johnson',
     position: 'Defender',
     number: '4',
-    image: '/media/player2.jpg',
+    image: '/media/Playing football/2023-07-12_22-46-41_UTC_3.jpg',
     stats: {
       appearances: 28,
       goals: 2,
@@ -35,18 +36,23 @@ const players = [
 
 const staff = [
   {
-    name: 'David Wilson',
-    role: 'Manager',
-    image: '/media/staff1.jpg',
-    bio: 'Former professional player with extensive coaching experience.',
+    name: 'Keith Ward',
+    role: 'First Team Manager',
+    image: '/media/staff/KEITH.webp',
+    bio: 'Leading our first team with extensive experience in football management.',
   },
   {
-    name: 'Sarah Thompson',
-    role: 'Assistant Manager',
-    image: '/media/staff2.jpg',
-    bio: 'UEFA B licensed coach with a passion for youth development.',
+    name: 'Sean Edwards',
+    role: 'Management Support Manager',
+    image: '/media/staff/SEAN.webp',
+    bio: 'Providing crucial support to the management team and club operations.',
   },
-  // Add more staff as needed
+  {
+    name: 'Samantha Baker',
+    role: 'Club Physiotherapist',
+    image: '/media/staff/SAMANTHA.webp',
+    bio: 'Ensuring our players stay fit and healthy with professional physiotherapy care.',
+  },
 ];
 
 export default function SquadPage() {
@@ -109,22 +115,23 @@ export default function SquadPage() {
 
       {/* Management Team */}
       <section className="max-w-7xl mx-auto px-4 py-16 bg-gray-50">
-        <h2 className="text-4xl font-bold mb-8">Management Team</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h2 className="text-4xl font-bold text-center mb-12">Management Team</h2>
+        <div className="grid md:grid-cols-3 gap-8">
           {staff.map((member, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative h-80">
+              <div className="relative h-[400px]">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  style={{ objectPosition: 'top' }}
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
                 <p className="text-amber-900 font-semibold mb-4">{member.role}</p>
                 <p className="text-gray-700">{member.bio}</p>
@@ -162,6 +169,39 @@ export default function SquadPage() {
                 Youth academy for players aged 8-15, emphasizing skill development.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Apply to Join Team */}
+      <section className="max-w-7xl mx-auto px-4 py-16 bg-gray-50">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-6">Apply to Join Our Team</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              Are you interested in joining Banstead Athletic FC? We're always looking for talented players
+              who share our passion for football and commitment to excellence. Whether you're an experienced
+              player or new to the game, we welcome applications from all skill levels.
+            </p>
+            <div className="space-y-4">
+              <Link
+                href="/contact"
+                className="inline-block px-6 py-3 bg-amber-600 text-white font-bold rounded-md hover:bg-amber-700 transition-colors"
+              >
+                Apply Now
+              </Link>
+              <p className="text-sm text-gray-600">
+                Please include your playing experience, preferred position, and any relevant achievements in your application.
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <Image
+              src="/media/Playing football/2023-07-12_22-46-41_UTC_4.jpg"
+              alt="Join Banstead Athletic FC"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

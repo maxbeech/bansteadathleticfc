@@ -38,7 +38,8 @@ export default function AboutPage() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Our journey has seen us compete in various leagues, including the Surrey Senior League,
               where we achieved multiple championships in the early 1950s. Today, we continue to
-              build on this legacy while embracing modern football development.
+              build on this legacy while embracing modern football development. Based in Chessington, Surrey,
+              we are proud to serve our local community.
             </p>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">

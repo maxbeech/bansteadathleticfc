@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'Banstead Athletic FC | The Yellows',
   description: 'Welcome to Banstead Athletic FC, a proud community-focused football club based in Chessington, Surrey. Join us in our journey as we build towards a brighter future.',
   keywords: 'Banstead Athletic FC, football club, Surrey football, community football, Chessington, The Yellows, Southern Combination League',
+  icons: {
+    icon: '/media/logo.png',
+    apple: '/media/logo.png',
+  },
 }
 
 export default function RootLayout({
